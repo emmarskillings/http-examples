@@ -1,7 +1,7 @@
 function getAndPrintHTML() {
 
-  var buffer = '';
   var https = require('https');
+  var buffer = '';
 
   var requestOptions = {
     host: 'sytantris.github.io',
@@ -13,14 +13,10 @@ function getAndPrintHTML() {
     response.on('data', function(data) {
       buffer += data;
     });
-
       response.on('end', function() {
       console.log(buffer);
     });
   });
-
-
-
 }
 
 getAndPrintHTML();
